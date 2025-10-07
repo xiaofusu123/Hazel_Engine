@@ -1,5 +1,0 @@
-﻿  LINK : 没有找到 D:\Program\App\VisualStudio\Projects\Hazel\bin\Debug~x64\Hazel\Hazel.dll 或上一个增量链接没有生成它；正在执行完全链接
-Log.obj : warning LNK4099: 未找到 PDB“vc143.pdb”(使用“Log.obj”或在“D:\Program\App\VisualStudio\Projects\Hazel\bin\Debug~x64\Hazel\vc143.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-Application.obj : warning LNK4099: 未找到 PDB“vc143.pdb”(使用“Application.obj”或在“D:\Program\App\VisualStudio\Projects\Hazel\bin\Debug~x64\Hazel\vc143.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-    正在创建库 D:\Program\App\VisualStudio\Projects\Hazel\bin\Debug~x64\Hazel\Hazel.lib 和对象 D:\Program\App\VisualStudio\Projects\Hazel\bin\Debug~x64\Hazel\Hazel.exp
-  Hazel.vcxproj -> D:\Program\App\VisualStudio\Projects\Hazel\bin\Debug~x64\Hazel\Hazel.dll

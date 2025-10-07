@@ -1,3 +1,0 @@
-﻿  LINK : 没有找到 D:\Program\App\VisualStudio\Projects\Hazel\bin\Debug~x64\Sandbox\Sandbox.exe 或上一个增量链接没有生成它；正在执行完全链接
-SandboxApp.obj : warning LNK4099: 未找到 PDB“vc143.pdb”(使用“SandboxApp.obj”或在“D:\Program\App\VisualStudio\Projects\Hazel\bin\Debug~x64\Sandbox\vc143.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-  Sandbox.vcxproj -> D:\Program\App\VisualStudio\Projects\Hazel\bin\Debug~x64\Sandbox\Sandbox.exe
