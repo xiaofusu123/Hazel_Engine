@@ -2,9 +2,6 @@
 
 #include "hazel/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Hazel
 {
 
