@@ -12,3 +12,5 @@
 /bin/Debug-windows-x86_64
 /bin-int/Debug-windows-x86_64
 /.vs
+/hazel/vendor/Glad/bin/Debug-windows-x86_64/Glad
+/hazel/vendor/Glad/bin-int/Debug-windows-x86_64/Glad
