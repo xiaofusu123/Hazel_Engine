@@ -10,8 +10,14 @@
     <Filter Include="Hazel\Events\Platform">
       <UniqueIdentifier>{51C4D473-BD30-906E-8624-28CCF24FB2D6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Hazel\Events\Platform\OpenGL">
+      <UniqueIdentifier>{65488167-5103-7113-FABA-E95DE654BBA3}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Hazel\Events\Platform\Windows">
       <UniqueIdentifier>{8B2FC6AF-F747-ADD9-C0F4-3C732CCC4173}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hazel\ImGui">
+      <UniqueIdentifier>{83AD5E9B-EF62-D790-7857-D167E40BCE94}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -37,8 +43,20 @@
     <ClInclude Include="src\Hazel\Events\MouseEvent.h">
       <Filter>Hazel\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Hazel\Events\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Hazel\Events\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hazel\Events\Platform\OpenGL\imgui_impl_glfw.h">
+      <Filter>Hazel\Events\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hazel\Events\Platform\OpenGL\imgui_impl_opengl3_loader.h">
+      <Filter>Hazel\Events\Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Hazel\Events\Platform\Windows\WindowsWindow.h">
       <Filter>Hazel\Events\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hazel\ImGui\ImGuiLayer.h">
+      <Filter>Hazel\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="src\Hazel\Layer.h">
       <Filter>Hazel</Filter>
@@ -58,8 +76,17 @@
     <ClCompile Include="src\Hazel\Application.cpp">
       <Filter>Hazel</Filter>
     </ClCompile>
+    <ClCompile Include="src\Hazel\Events\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Hazel\Events\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hazel\Events\Platform\OpenGL\imgui_impl_glfw.cpp">
+      <Filter>Hazel\Events\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Hazel\Events\Platform\Windows\WindowsWindow.cpp">
       <Filter>Hazel\Events\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hazel\ImGui\ImGuiLayer.cpp">
+      <Filter>Hazel\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Hazel\Layer.cpp">
       <Filter>Hazel</Filter>
