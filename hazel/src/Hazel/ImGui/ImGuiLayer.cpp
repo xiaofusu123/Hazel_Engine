@@ -1,10 +1,10 @@
 #include "hzpch.h"
 #include "ImGuiLayer.h"
 
-#include "imgui.h"
-#include "hazel/Events/Platform/OpenGL/ImGuiOpenGLRenderer.h"
 #include "GLFW/glfw3.h"
+#include "hazel/Events/Platform/OpenGL/ImGuiOpenGLRenderer.h"
 #include "hazel/Events/Platform/OpenGL/imgui_impl_glfw.h"
+#include "imgui.h"
 
 #include "Hazel/Application.h"
 
@@ -25,14 +25,14 @@ namespace Hazel
     void ImGuiLayer::OnAttach()
     {
         IMGUI_CHECKVERSION();
-        ImGui::CreateContext();
-        ImGui::StyleColorsDark();
 
+        ImGui::CreateContext();
         ImGuiIO& io = ImGui::GetIO(); (void)io;
+
         io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
-        //io.BackendFlags |= ImGuiBackendFlags_HasMouseCursors;
-        //io.BackendFlags |= ImGuiBackendFlags_HasSetMousePos;
-        //io.BackendFlags |= ImGuiBackendFlags_RendererHasVtxOffset;
+        io.BackendFlags |= ImGuiBackendFlags_HasMouseCursors;
+        io.BackendFlags |= ImGuiBackendFlags_HasSetMousePos;
+        io.BackendFlags |= ImGuiBackendFlags_RendererHasVtxOffset;
 
         //io.KeyMap[ImGuiKey_Tab] = GLFW_KEY_TAB;
         //io.KeyMap[ImGuiKey_LeftArrow] = GLFW_KEY_LEFT;
@@ -57,10 +57,12 @@ namespace Hazel
         //io.KeyMap[ImGuiKey_Y] = GLFW_KEY_Y;
         //io.KeyMap[ImGuiKey_Z] = GLFW_KEY_Z;
 
-        //Application& app = Application::Get();
-        //GLFWwindow* window = static_cast<GLFWwindow*>(app.GetWindow().GetNativeWindow());
+        ImGui::StyleColorsDark();
 
-        //ImGui_ImplGlfw_InitForOpenGL(window, true);
+        Application& app = Application::Get();
+        GLFWwindow* window = static_cast<GLFWwindow*>(app.GetWindow().GetNativeWindow());
+
+        ImGui_ImplGlfw_InitForOpenGL(window, true);
         ImGui_ImplOpenGL3_Init("#version 410");
     }
 
@@ -80,7 +82,7 @@ namespace Hazel
         m_Time = time;
 
         ImGui_ImplOpenGL3_NewFrame();
-        //ImGui_ImplGlfw_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
         static bool show = true;
