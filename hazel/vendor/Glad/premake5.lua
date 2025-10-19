@@ -19,6 +19,9 @@ project "Glad"
 
 	filter "system:windows"
 		systemversion "latest"
+	
+	filter { "system:windows", "configurations:Debug" }
+		buildoptions "/MT"
 
 	filter { "system:windows", "configurations:Release" }
 		buildoptions "/MT"
