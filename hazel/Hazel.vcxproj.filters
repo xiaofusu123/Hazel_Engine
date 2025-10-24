@@ -52,11 +52,17 @@
     <ClInclude Include="src\Hazel\Events\Platform\OpenGL\imgui_impl_opengl3_loader.h">
       <Filter>Hazel\Events\Platform\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\Hazel\Events\Platform\Windows\WindowsInput.h">
+      <Filter>Hazel\Events\Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Hazel\Events\Platform\Windows\WindowsWindow.h">
       <Filter>Hazel\Events\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\Hazel\ImGui\ImGuiLayer.h">
       <Filter>Hazel\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hazel\Input.h">
+      <Filter>Hazel</Filter>
     </ClInclude>
     <ClInclude Include="src\Hazel\Layer.h">
       <Filter>Hazel</Filter>
@@ -81,6 +87,9 @@
     </ClCompile>
     <ClCompile Include="src\Hazel\Events\Platform\OpenGL\imgui_impl_glfw.cpp">
       <Filter>Hazel\Events\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hazel\Events\Platform\Windows\WindowsInput.cpp">
+      <Filter>Hazel\Events\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Hazel\Events\Platform\Windows\WindowsWindow.cpp">
       <Filter>Hazel\Events\Platform\Windows</Filter>

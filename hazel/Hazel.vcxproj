@@ -84,7 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <AdditionalOptions>/utf-8 /MDd %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -95,7 +95,8 @@
       <ImportLibrary>..\bin\Debug-windows-x86_64\Hazel\Hazel.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy /B /Y ..\bin\Debug-windows-x86_64\Hazel\Hazel.dll ..\bin\Debug-windows-x86_64\Sandbox</Command>
+      <Command>if not exist "../bin/Debug-windows-x86_64/Sandbox" mkdir "../bin/Debug-windows-x86_64/Sandbox"
+copy /B /Y ..\bin\Debug-windows-x86_64\Hazel\Hazel.dll ..\bin\Debug-windows-x86_64\Sandbox</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -111,7 +112,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalOptions>/utf-8 /MD %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -123,7 +124,8 @@
       <ImportLibrary>..\bin\Release-windows-x86_64\Hazel\Hazel.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy /B /Y ..\bin\Release-windows-x86_64\Hazel\Hazel.dll ..\bin\Release-windows-x86_64\Sandbox</Command>
+      <Command>if not exist "../bin/Release-windows-x86_64/Sandbox" mkdir "../bin/Release-windows-x86_64/Sandbox"
+copy /B /Y ..\bin\Release-windows-x86_64\Hazel\Hazel.dll ..\bin\Release-windows-x86_64\Sandbox</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -139,7 +141,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalOptions>/utf-8 /MD %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -151,7 +153,8 @@
       <ImportLibrary>..\bin\Dist-windows-x86_64\Hazel\Hazel.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy /B /Y ..\bin\Dist-windows-x86_64\Hazel\Hazel.dll ..\bin\Dist-windows-x86_64\Sandbox</Command>
+      <Command>if not exist "../bin/Dist-windows-x86_64/Sandbox" mkdir "../bin/Dist-windows-x86_64/Sandbox"
+copy /B /Y ..\bin\Dist-windows-x86_64\Hazel\Hazel.dll ..\bin\Dist-windows-x86_64\Sandbox</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -166,8 +169,10 @@
     <ClInclude Include="src\Hazel\Events\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Hazel\Events\Platform\OpenGL\imgui_impl_glfw.h" />
     <ClInclude Include="src\Hazel\Events\Platform\OpenGL\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="src\Hazel\Events\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Hazel\Events\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Hazel\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Hazel\Input.h" />
     <ClInclude Include="src\Hazel\Layer.h" />
     <ClInclude Include="src\Hazel\LayerStack.h" />
     <ClInclude Include="src\Hazel\Log.h" />
@@ -178,6 +183,7 @@
     <ClCompile Include="src\Hazel\Application.cpp" />
     <ClCompile Include="src\Hazel\Events\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Hazel\Events\Platform\OpenGL\imgui_impl_glfw.cpp" />
+    <ClCompile Include="src\Hazel\Events\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Hazel\Events\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Hazel\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Hazel\Layer.cpp" />

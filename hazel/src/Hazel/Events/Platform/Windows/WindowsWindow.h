@@ -19,11 +19,11 @@ namespace Hazel
         inline unsigned int GetWidth() const override { return m_Data.Width; }
         inline unsigned int GetHeight() const override { return m_Data.Height; }
 
-        inline void* GetNativeWindow() const override { return m_Window; }
-
         inline void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
         void SetVSync(bool enabled) override;
         bool IsVSync() const override;
+
+        inline void* GetNativeWindow() const override { return m_Window; }
 
     private:
         virtual void Init(const WindowProps& props);
