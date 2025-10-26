@@ -165,6 +165,7 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Hazel\Hazel.dll ..\bin\Dist-windows-x86_64
     <ClInclude Include="src\Hazel\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Hazel\Events\Event.h" />
     <ClInclude Include="src\Hazel\Events\KeyEvent.h" />
+    <ClInclude Include="src\Hazel\MouseButtonCodes.h" />
     <ClInclude Include="src\Hazel\Events\MouseEvent.h" />
     <ClInclude Include="src\Hazel\Events\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Hazel\Events\Platform\OpenGL\imgui_impl_glfw.h" />
@@ -173,6 +174,7 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Hazel\Hazel.dll ..\bin\Dist-windows-x86_64
     <ClInclude Include="src\Hazel\Events\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Hazel\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Hazel\Input.h" />
+    <ClInclude Include="src\Hazel\KeyCodes.h" />
     <ClInclude Include="src\Hazel\Layer.h" />
     <ClInclude Include="src\Hazel\LayerStack.h" />
     <ClInclude Include="src\Hazel\Log.h" />
