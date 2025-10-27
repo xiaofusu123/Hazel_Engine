@@ -4,7 +4,10 @@ class ExampleLayer : public Hazel::Layer
 {
 public:
     ExampleLayer()
-        : Layer("Example") { }
+        : Layer("Example")
+    {
+
+    }
 
     void OnUpdate() override
     {
